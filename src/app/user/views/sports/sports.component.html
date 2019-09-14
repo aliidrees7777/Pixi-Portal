@@ -1,0 +1,463 @@
+<app-header></app-header>
+<!-- Start Breadcrumbs -->
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <h2>Sports Society</h2>
+        <ul class="bread-list">
+          <li><a href="">Home<i class="fa fa-angle-right"></i></a></li>
+          <li class="active"><a href="">Sports Society</a></li>
+        </ul>
+      </div>
+    </div>  
+  </div>
+</div>
+<!--/ End Breadcrumbs -->
+
+<!-- Start Blog -->
+<section id="blog-main" class="blog-main archive grid section">
+    <div class="container">
+      <div class="row">
+        <div class="blog-main">	
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+              <div  *ngIf="show_blog">
+                  <div *ngFor="let item of displayEvent" class="col-md-4 col-sm-4 col-xs-12">
+                      <!-- Single Post -->
+                      <div class="tilee">
+                        <div class="wrapper">
+                            <div class="headerr"><b>{{item.name}}</b></div>
+        
+                            <div class="banner-img">
+                                <img class="edit"  [src]="item.url1" alt="" >
+                            </div>
+        
+                            <div class="dates">
+                                <div class="start">
+                                    <strong>START</strong> {{item.start}}
+                                    <span></span>
+                                </div>
+                                <div class="ends">
+                                    <strong>END</strong> {{item.end}} 
+                                </div>
+                            </div>
+                            <p style="text-align: center; color:#ffffff">{{item.description}}</p>
+                            <div class="footer">
+                                <a  (click)="editItem($event, item)" id="btToggle" class="Cbtn Cbtn-primary">{{button_name}}</a>
+                                <!-- <a  (click)="editItem($event, item)" id="btToggle" data-toggle="modal" data-target="#game1" class="Cbtn Cbtn-primary">view</a> -->
+                            </div>
+                           
+                        </div>
+                    </div>
+                      <!--/ End Single Post -->
+                    </div>
+              </div>
+              
+  
+              
+            </div>
+                  
+          </div>
+        </div>						
+      </div>
+    </div>
+  
+  
+    <div *ngIf="show_dialog" class="container gallery-container">
+  
+      <h1>Gallery</h1>
+  
+     
+      <div class="tz-gallery">
+  
+          <div class="row">
+  
+            <div class="col-lg-4 col-md-12 mb-4">
+  
+              <a><img class="img-fluid z-depth-1" [src]="itemToEdit.url1" alt="video"
+                  data-toggle="modal" data-target="#addEmployeeModal1"></a>
+  
+                  <div id="addEmployeeModal1" class="modal fade">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                    
+                    <div class="modal-header">
+                    
+                    <h4 class="modal-title">Picture</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">         
+                    
+                    <br>
+                    <br>
+                    
+                    
+                    <img [src]="itemToEdit.url1">
+                    
+                    <div class="modal-footer">
+                    
+                    <a  type="button" [href]="itemToEdit.url1" id="btToggle" class="Cbtn-primary">Download me</a>
+                    <a  type="button" data-dismiss="modal" style="color:red; margin-left:10px" class="Cbtn-danger">Close</a>
+      
+                        
+                    </div>
+                    </div>
+                    
+                    </div>
+                    </div>
+                    </div>
+          
+            </div>
+            <!-- Grid column -->
+  
+            <div class="col-lg-4 col-md-12 mb-4">
+  
+                <a><img class="img-fluid z-depth-1" [src]="itemToEdit.url2" alt="video"
+                    data-toggle="modal" data-target="#addEmployeeModal2"></a>
+    
+                    <div id="addEmployeeModal2" class="modal fade">
+                      <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                      
+                      <div class="modal-header">
+                      
+                      <h4 class="modal-title">Picture</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+                      <div class="modal-body">         
+                      
+                      <br>
+                      <br>
+                      
+                      
+                      <img [src]="itemToEdit.url2">
+                      
+                      <div class="modal-footer">
+                      
+                      <a  type="button" [href]="itemToEdit.url2" id="btToggle" class="Cbtn-primary">Download me</a>
+                      <a  type="button" data-dismiss="modal" style="color:red; margin-left:10px" class="Cbtn-danger">Close</a>
+        
+                          
+                      </div>
+                      </div>
+                      
+                      </div>
+                      </div>
+                      </div>
+            
+            </div>
+              <!-- Grid column -->
+  
+              <div class="col-lg-4 col-md-12 mb-4">
+  
+                  <a><img class="img-fluid z-depth-1" [src]="itemToEdit.url3" alt="video"
+                      data-toggle="modal" data-target="#addEmployeeModal3"></a>
+      
+                      <div id="addEmployeeModal3" class="modal fade">
+                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        
+                        <div class="modal-header">
+                        
+                        <h4 class="modal-title">Picture</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">         
+                        
+                        <br>
+                        <br>
+                        
+                        
+                        <img [src]="itemToEdit.url3">
+                        
+                        <div class="modal-footer">
+                        
+                        <a  type="button" [href]="itemToEdit.url3" id="btToggle" class="Cbtn-primary">Download me</a>
+                        <a  type="button" data-dismiss="modal" style="color:red; margin-left:10px" class="Cbtn-danger">Close</a>
+          
+                            
+                        </div>
+                        </div>
+                        
+                        </div>
+                        </div>
+                        </div>
+              
+                </div>
+                <!-- Grid column -->
+          
+              
+          </div>
+  
+          <div class="row">
+  
+              <div class="col-lg-4 col-md-12 mb-4">
+    
+                <a><img class="img-fluid z-depth-1" [src]="itemToEdit.url4" alt="video"
+                    data-toggle="modal" data-target="#addEmployeeModal4"></a>
+    
+                    <div id="addEmployeeModal4" class="modal fade">
+                      <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                      
+                      <div class="modal-header">
+                      
+                      <h4 class="modal-title">Picture</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+                      <div class="modal-body">         
+                      
+                      <br>
+                      <br>
+                      
+                      
+                      <img [src]="itemToEdit.url4">
+                      
+                      <div class="modal-footer">
+                      
+                      <a  type="button" [href]="itemToEdit.url4" id="btToggle" class="Cbtn-primary">Download me</a>
+                      <a  type="button" data-dismiss="modal" style="color:red; margin-left:10px" class="Cbtn-danger">Close</a>
+        
+                          
+                      </div>
+                      </div>
+                      
+                      </div>
+                      </div>
+                      </div>
+            
+              </div>
+              <!-- Grid column -->
+    
+              <div class="col-lg-4 col-md-12 mb-4">
+    
+                  <a><img class="img-fluid z-depth-1" [src]="itemToEdit.url5" alt="video"
+                      data-toggle="modal" data-target="#addEmployeeModal5"></a>
+      
+                      <div id="addEmployeeModal5" class="modal fade">
+                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        
+                        <div class="modal-header">
+                        
+                        <h4 class="modal-title">Picture</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">         
+                        
+                        <br>
+                        <br>
+                        
+                        
+                        <img [src]="itemToEdit.url5">
+                        
+                        <div class="modal-footer">
+                        
+                        <a  type="button" [href]="itemToEdit.url5" id="btToggle" class="Cbtn-primary">Download me</a>
+                        <a  type="button" data-dismiss="modal" style="color:red; margin-left:10px" class="Cbtn-danger">Close</a>
+          
+                            
+                        </div>
+                        </div>
+                        
+                        </div>
+                        </div>
+                        </div>
+              
+              </div>
+                <!-- Grid column -->
+    
+              <div class="col-lg-4 col-md-12 mb-4">
+    
+                    <a><img class="img-fluid z-depth-1" [src]="itemToEdit.url6" alt="video"
+                        data-toggle="modal" data-target="#addEmployeeModal6"></a>
+        
+                        <div id="addEmployeeModal6" class="modal fade">
+                          <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                          
+                          <div class="modal-header">
+                          
+                          <h4 class="modal-title">Picture</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          </div>
+                          <div class="modal-body">         
+                          
+                          <br>
+                          <br>
+                          
+                          
+                          <img [src]="itemToEdit.url6">
+                          
+                          <div class="modal-footer">
+                          
+                          <a  type="button" [href]="itemToEdit.url6" id="btToggle" class="Cbtn-primary">Download me</a>
+                          <a  type="button" data-dismiss="modal" style="color:red; margin-left:10px" class="Cbtn-danger">Close</a>
+            
+                              
+                          </div>
+                          </div>
+                          
+                          </div>
+                          </div>
+                          </div>
+                
+              </div>
+                  <!-- Grid column -->
+            
+                
+          </div>
+  
+          <div class="row">
+  
+              <div class="col-lg-4 col-md-12 mb-4">
+    
+                <a><img class="img-fluid z-depth-1" [src]="itemToEdit.url7" alt="video"
+                    data-toggle="modal" data-target="#addEmployeeModal7"></a>
+    
+                    <div id="addEmployeeModal7" class="modal fade">
+                      <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                      
+                      <div class="modal-header">
+                      
+                      <h4 class="modal-title">Picture</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+                      <div class="modal-body">         
+                      
+                      <br>
+                      <br>
+                      
+                      
+                      <img [src]="itemToEdit.url7">
+                      
+                      <div class="modal-footer">
+                      
+                      <a  type="button" [href]="itemToEdit.url7" id="btToggle" class="Cbtn-primary">Download me</a>
+                      <a  type="button" data-dismiss="modal" style="color:red; margin-left:10px" class="Cbtn-danger">Close</a>
+        
+                          
+                      </div>
+                      </div>
+                      
+                      </div>
+                      </div>
+                      </div>
+            
+              </div>
+              <!-- Grid column -->
+    
+              <div class="col-lg-4 col-md-12 mb-4">
+    
+                  <a><img class="img-fluid z-depth-1" [src]="itemToEdit.url8" alt="video"
+                      data-toggle="modal" data-target="#addEmployeeModal8"></a>
+      
+                      <div id="addEmployeeModal8" class="modal fade">
+                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        
+                        <div class="modal-header">
+                        
+                        <h4 class="modal-title">Picture</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">         
+                        
+                        <br>
+                        <br>
+                        
+                        
+                        <img [src]="itemToEdit.url8">
+                        
+                        <div class="modal-footer">
+                        
+                        <a  type="button" [href]="itemToEdit.url8" id="btToggle" class="Cbtn-primary">Download me</a>
+                        <a  type="button" data-dismiss="modal" style="color:red; margin-left:10px" class="Cbtn-danger">Close</a>
+          
+                            
+                        </div>
+                        </div>
+                        
+                        </div>
+                        </div>
+                        </div>
+              
+              </div>
+                <!-- Grid column -->
+    
+                <div class="col-lg-4 col-md-12 mb-4">
+    
+                    <a><img class="img-fluid z-depth-1" [src]="itemToEdit.url9" alt="video"
+                        data-toggle="modal" data-target="#addEmployeeModal9"></a>
+        
+                        <div id="addEmployeeModal9" class="modal fade">
+                          <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                          
+                          <div class="modal-header">
+                          
+                          <h4 class="modal-title">Picture</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          </div>
+                          <div class="modal-body">         
+                          
+                          <br>
+                          <br>
+                          
+                          
+                          <img [src]="itemToEdit.url9">
+                          
+                          <div class="modal-footer">
+                          
+                          <a  type="button" [href]="itemToEdit.url9" id="btToggle" class="Cbtn-primary">Download me</a>
+                          <a  type="button" data-dismiss="modal" style="color:red; margin-left:10px" class="Cbtn-danger">Close</a>
+            
+                              
+                          </div>
+                          </div>
+                          
+                          </div>
+                          </div>
+                          </div>
+                
+                  </div>
+                  <!-- Grid column -->
+            
+                
+          </div>
+  
+          <div class="row">
+              <div class="col-md-6"> 
+                        
+              </div>
+              <div class="col-md-6">
+                  <a  (click)="showEvents($event)" class="btn">Close</a>       
+              </div>       
+          </div>
+  
+          
+  
+  
+      </div>
+  
+    </div>
+</section>
+<!--/ End Blog -->	
+
+<!-- Start Call-To-Action -->
+<section class="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="call-to-main">
+          <h2>we'll one over <span>5 Years of experience you always</span> the best guidance</h2>
+          <a routerLink="/contact"  class="btn"><i class="fa fa-send"></i>Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ End Call-To-Action -->
+<app-footer></app-footer>

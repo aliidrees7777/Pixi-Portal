@@ -1,0 +1,109 @@
+<header id="header" class="header">
+     <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          
+          <!--/ End Logo -->
+          <div  class="mobile-nav"></div>
+        </div>
+        <div style="margin-top:30px;" class="col-md-9 col-sm-9 col-xs-12">
+          <!-- Header Widget -->
+          <div class="header-widget">
+            <!-- Single Widget -->
+            <div class="single-widget">
+              <i class="fa fa-clock-o"></i>
+              <h4>Opening Time</h4>
+              <p>Mon-Fri: 9.00-17.00</p>
+            </div>
+            <!--/ End Single Widget -->
+            <!-- Single Widget -->
+            <div class="single-widget">
+              <i class="fa fa-envelope"></i>
+              <h4>Email address</h4>
+              <p><a href="">info@pixiportal.com</a></p>
+            </div>
+            <!--/ End Single Widget -->
+            <!-- Single Widget -->
+            <div class="single-widget">
+              <i class="fa fa-phone"></i>
+              <h4>Phone</h4>
+              <p>+(92) 335-7674693</p>
+            </div>
+            <!--/ End Single Widget -->
+          </div>
+          <!--/ End Header Widget -->
+        </div>
+      </div>
+    </div>
+    <!-- Header Inner -->
+    <div class="header-inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="nav-area">
+              <!-- Main Menu -->
+              <nav class="mainmenu">
+                <div class="collapse navbar-collapse">	
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a routerLink="/">Home</a>
+                    </li>
+                    <li><a href="/environment">Environment Society<!-- <i class="fa fa-angle-down"></i> --></a>                      
+                    </li>	
+                    <li><a routerLink="/acm">A C M<!-- <i class="fa fa-angle-down"></i> --></a>                   
+                    </li>
+                    <li><a routerLink="/sports">Sports Society</a>
+                    </li>
+                    
+                    <ng-template #anonymousUser>
+                        <li ><a (click)="login()">Login<i class="fa fa-angle-down"></i></a>
+                        </li>
+                    </ng-template>
+                    
+                    <li ngbDropdown  *ngIf="auth.user$ | async as user; else anonymousUser"  >
+                      <a ngbDropdownToggle class="nav-link dropdown-toggle"   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{user.displayName}}<i class="fa fa-angle-down"></i>
+                      </a>
+                        <div ngbDropdownMenu class="drop-down" >
+                            <a  href="" (click)="logout()" >Log Out</a>
+                            </div> 
+                    </li>
+                    
+                    
+                    											
+                  </ul>
+                </div>
+              </nav>
+              <!--/ End Main Menu -->
+              <!-- Social -->
+              <!-- <ul class="social">
+                <li><a href="https://www.linkedin.com/in/softtar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://www.facebook.com/Softtar/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li class="active"><a href="https://twitter.com/Softtar_" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.pinterest.com/softtar/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="https://www.behance.net/softtar013be6" target="_blank"><i class="fa fa-behance"></i></a></li>
+              </ul> -->
+              <!--/ End Social -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ End Header Inner -->
+  </header>
+
+  <div class="modal fade" id="login_2" tabindex="-1" role="dialog" aria-labelledby="myLogin"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content modal-popup">
+      <a style="cursor: pointer;" class="close-link"><i class="fa fa-times"></i></a>
+      <form action="#" class="popup-form" id="myLogin">
+        <div class="login_icon"><i class="fa fa-lock"></i></div>
+        <button class="btn btn-danger close-link" (click)="login()">
+          <i class="fa fa-google"></i> Connect Google
+        </button>
+      </form>
+    </div>
+  </div>
+</div><!-- End modal -->
+
+

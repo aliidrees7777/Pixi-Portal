@@ -1,0 +1,283 @@
+<app-header></app-header>
+<div>
+    <!-- Start Hero Area -->
+    <section class="hero-area style2 creative">
+        <div class="slider-two">
+          <!-- Single Slider --> 
+          <div class="single-slider">
+            <div class="background-layer">
+              <div class="single-layer one"></div>
+              <div class="single-layer two"></div>
+              <div class="single-layer three"></div>
+              <div class="single-layer four"></div>
+              <div class="single-layer five"></div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <!-- Slider Text -->
+                  <div class="slide-text">
+                    <h1>pucit pixi <span>portal</span></h1>
+                    <p>We Provide the pictures of all Evnets held in the premisis of Punjab University College of Information and technology.
+                                    </p>
+                    <div class="slide-btn">	
+                      <a href="#projects" class="btn primary"><i class="fa fa-long-arrow-down"></i>View Events</a>
+                    </div>
+                  </div>
+                  <!--/ End SLider Text -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/ End Single Slider -->
+          <!-- Single Slider --> 
+          <div class="single-slider">
+            <div class="background-layer">
+              <div class="single-layer one"></div>
+              <div class="single-layer two"></div>
+              <div class="single-layer three"></div>
+              <div class="single-layer four"></div>
+              <div class="single-layer five"></div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <!-- Slider Text -->
+                  <div class="slide-text">
+                    <h1>Digital <span>Marketing</span></h1>
+                    <p>Our customised web solutions promise to deliver value; allowing businesses to gain a competitive advantage, greater market share, increased revenue, brand equity and reduced advertising spend.
+                                    </p>
+                    <div class="slide-btn">	
+                      <a href="blog.html" class="btn primary"><i class="fa fa-long-arrow-left"></i>Our Blog</a>
+                    </div>
+                  </div>
+                  <!--/ End SLider Text -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/ End Single Slider -->
+          <!-- Single Slider --> 
+          <div class="single-slider">
+            <div class="background-layer">h
+              <div class="single-layer one"></div>
+              <div class="single-layer two"></div>
+              <div class="single-layer three"></div>
+              <div class="single-layer four"></div>
+              <div class="single-layer five"></div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <!-- Slider Text -->
+                  <div class="slide-text">
+                    <h1>Mobile <span>Applications</span></h1>
+                    <p>We offer customized Android based Mobile Application and iPhone based mobile application solutions.
+                                    </p>
+                    <div class="slide-btn">	
+                      <a href="contact.html" class="btn primary"><i class="fa fa-long-arrow-left"></i>Contact Us</a>
+                    </div>
+                  </div>
+                  <!--/ End SLider Text -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/ End Single Slider -->
+        </div>
+      </section>
+      <!--/ End Hero Area -->
+      
+      <!-- Start Features -->
+      <section class="features">
+        <div class="container">
+          <div class="row">
+            <!-- Features Single -->
+            <div class="col-md-4 col-sm-4 col-xs-12 features-single">
+              <i class="fa fa-meetup"></i>
+              <h2>DISCUSS</h2>
+              <p>Every event is brainstormed at the basic levels before chalking out a plan.</p>
+            </div>
+            <!--/ End Features Single -->
+            <!-- Features Single -->
+            <div class="col-md-4 col-sm-4 col-xs-12 features-single active ">
+              <i class="fa fa-code"></i>
+              <h2>PLAN</h2>
+              <p>A sequence of steps is agreed upon to meet requirements as well as deadlines.</p>
+            </div>
+            <!--/ End Features Single -->
+            <!-- Features Single -->
+            <div class="col-md-4 col-sm-4 col-xs-12 features-single">
+              <i class="fa fa-sellsy"></i>
+              <h2>build</h2>
+              <p>The final step is carried out by the employes, and the event is submitted for approval.</p>
+            </div>
+            <!--/ End Features Single -->
+          </div>
+        </div>
+      </section>
+      <!--/ End Features -->
+  <!-- Start Projects -->
+      <section id="projects" class="projects section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-title">
+                <h1>Our Events</h1>
+                <p>Our cross-functional, agile teams create beautiful events and pictures for your comfort and enjoy.</p>
+              </div>
+            </div>
+          </div>
+          				
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="row">
+                <div *ngFor="let item of displayEvent" class="col-md-4 col-sm-4 col-xs-12">
+                  <!-- Single Post -->
+                  <div class="single-blog slider">
+                    <div class="blog-post">
+                      <div class="blog-head">
+                        <div class="blog-slide">
+                          <div class="single-slide">
+                            <img href="/envronment" [src]="item.url1" alt="">
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <div class="blog-info">
+                        <h2><a href="">{{item.name}}</a></h2>
+                        
+                        <p>{{item.description}}</p>
+                      </div>	
+                    </div>				
+                  </div>
+                  <!--/ End Single Post -->
+                </div>
+    
+                
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      <!--/ End Projects -->
+          
+      <!-- Start Counter -->
+      <div id="counter" class="counter section" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <!-- Single Counter-->
+              <div class="counter-single">
+                <div class="icon">
+                  <i class="fa fa-tasks"></i>
+                </div>
+                <div class="s-info">
+                  <span class="number">700</span>
+                  <p>Satisfied Clients</p>
+                </div>
+              </div>
+              <!--/ End Single Counter-->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <!-- Single Counter-->
+              <div class="counter-single">
+                <div class="icon">
+                  <i class="fa fa-users"></i>
+                </div>
+                <div class="s-info">
+                  <span class="number">15</span>
+                  <p>Ongoing Events</p>
+                </div>
+              </div>
+              <!--/ End Single Counter-->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <!-- Single Counter-->
+              <div class="counter-single">
+                <div class="icon">
+                  <i class="fa fa-coffee"></i>
+                </div>
+                <div class="s-info">
+                  <span class="number">999</span>
+                  <p>Cups of cofee</p>
+                </div>
+              </div>
+              <!--/ End Single Counter-->
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <!-- Single Counter-->
+              <div class="counter-single">
+                <div class="icon">
+                  <i class="fa fa-trophy"></i>
+                </div>
+                <div class="s-info">
+                  <span class="number">18</span>
+                  <p>Winning Awards</p>
+                </div>
+              </div>
+              <!--/ End Single Counter-->
+            </div>
+          </div>
+        </div>
+      </div>	
+      <!--/ End Counter -->
+      
+  
+      
+      <!-- Start Testimonials -->
+      <section id="testimonials" class="testimonials section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="testimonial-carousel">
+                <!-- Single Testimonial -->
+                <div class="single-testimonial">
+                  <div class="testimonial-content">
+                    <i class="fa fa-quote-left"></i>
+                    <p>They provided so much more than I asked for! I am pleased with my event and the interaction with their representative</p>
+                  </div>
+                  <div class="testimonial-info">
+                    <span class="arrow"></span>
+                    <img src="../../../assets/images/testi01.jpg" alt="#">
+                    <h6>Justin<span></span></h6>
+                  </div>				
+                </div>
+                <!--/ End Single Testimonial -->	
+                <!-- Single Testimonial -->
+                <div class="single-testimonial">
+                  <div class="testimonial-content">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Pixi Portal is very nice & professional team , I am very happy about work done. Our annual event has been done by them and it has been appreciated by many people. Thanks to Pixi Portal Team</p>
+                  </div>
+                  <div class="testimonial-info">
+                    <span class="arrow"></span>
+                    <img src="../../../assets/images/testi02.jpg" alt="#">
+                    <h6>Anatoly K<span></span></h6>
+                  </div>			
+                </div>
+                <!--/ End Single Testimonial -->	
+                <!-- Single Testimonial -->
+                <div class="single-testimonial">
+                  <div class="testimonial-content">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Excellent Event Company! I will definitely work with them again. Good communication, good work, on time!</p>
+                  </div>
+                  <div class="testimonial-info">
+                    <span class="arrow"></span>
+                    <img src="../../../assets/images/testi03.jpg" alt="#">
+                    <h6>Chad Hoffman<span></span></h6>
+                  </div>			
+                </div>
+                <!--/ End Single Testimonial -->		
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--/ End Testimonial -->
+
+</div>   
+<app-footer></app-footer>   

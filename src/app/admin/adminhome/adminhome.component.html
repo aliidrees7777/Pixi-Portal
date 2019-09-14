@@ -1,0 +1,47 @@
+<app-adminheader></app-adminheader>			
+   
+ <!-- About Us -->
+  <section id="about-us" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="tabs-main center-nav">	
+            
+              <div class="nav-main">
+									<!-- Tab Menu -->
+									<ul class="nav-tabs" role="tablist">
+										<li role="presentation" class="active"><a href="#about" role="tab" data-toggle="tab"><i class="fa fa-photo"></i><span>Environment Society</span></a></li>
+										<li role="presentation"><a href="#story" role="tab" data-toggle="tab"><i class="fa fa-photo"></i><span>A C M</span></a></li>
+                    <li role="presentation"><a href="#photo" role="tab"  data-toggle="tab"><i class="fa fa-photo"></i><span>Sports Society </span></a></li>
+                    <li role="presentation"><a href="" (click)="logout()" role="tab"  data-toggle="tab"><i class="fa fa-user-o"></i><span>Logout </span></a></li>
+									
+									</ul>
+								</div>
+								
+            <div class="tab-content">
+              
+              <div role="tabpanel" class="tab-pane fade in active" id="about">
+                  <app-adminenvironment></app-adminenvironment>
+              </div>
+
+              <div role="tabpanel" class="tab-pane fade in" id="story">
+                
+                <app-adminliterary></app-adminliterary> 
+              </div>
+              
+              <div role="tabpanel" class="tab-pane fade in" id="photo">
+                <app-adminsports></app-adminsports>
+              </div>
+             
+              <div role="tabpanel" class="tab-pane fade in" id="challanges">
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>	
+    </div>	
+  </section>
+
+<app-adminfooter></app-adminfooter>          
